@@ -271,7 +271,7 @@ void RubiksCube::print() const
 
     for (int row =0;row<3;row++) 
     {
-        for (unsigned i=0; i<7;i++) cout << " ";
+        for (unsigned i=0;i<7;i++) cout << " ";
 
         for (int col=0;col<3;col++) 
         {

@@ -25,7 +25,24 @@ private:
 public:
     char cube[6][3][3];
 
-    RubiksCube3dArray() 
+    // RubiksCube3dArray() 
+    // {
+    //     for (int i = 0; i < 6; i++) 
+    //     {
+    //         for (int j = 0; j < 3; j++) 
+    //         {
+    //             for (int k = 0; k < 3; k++)
+    //             {
+    //                 cube[i][j][k] = getColorLetter(COLOR[i]);
+    //             }
+    //         }
+    //     }
+
+    //     RubiksCube::print();
+    //     cout<<"------------------------------------------------------------------------\n";
+    // }
+
+    void init()
     {
         for (int i = 0; i < 6; i++) 
         {
@@ -37,8 +54,7 @@ public:
                 }
             }
         }
-
-        RubiksCube::print();
+        
     }
 
     string getColor(string face, unsigned row, unsigned col) const 
@@ -111,7 +127,8 @@ public:
         return *this;
     }
 
-    RubiksCube &l() override {
+    RubiksCube &l() override 
+    {
         this->rotateFace(1);
 
         char temp_arr[3] = {};
@@ -124,7 +141,8 @@ public:
         return *this;
     }
 
-    RubiksCube &lPrime() {
+    RubiksCube &lPrime() 
+    {
         this->l();
         this->l();
         this->l();
@@ -132,14 +150,16 @@ public:
         return *this;
     }
 
-    RubiksCube &l2() {
+    RubiksCube &l2() 
+    {
         this->l();
         this->l();
 
         return *this;
     }
 
-    RubiksCube &f() {
+    RubiksCube &f() 
+    {
         this->rotateFace(2);
 
         char temp_arr[3] = {};
@@ -152,7 +172,8 @@ public:
         return *this;
     }
 
-    RubiksCube &fPrime() {
+    RubiksCube &fPrime() 
+    {
         this->f();
         this->f();
         this->f();
@@ -160,14 +181,16 @@ public:
         return *this;
     }
 
-    RubiksCube &f2() {
+    RubiksCube &f2() 
+    {
         this->f();
         this->f();
 
         return *this;
     }
 
-    RubiksCube &r() {
+    RubiksCube &r() 
+    {
         this->rotateFace(3);
 
         char temp_arr[3] = {};
@@ -180,7 +203,8 @@ public:
         return *this;
     }
 
-    RubiksCube &rPrime() {
+    RubiksCube &rPrime() 
+    {
         this->r();
         this->r();
         this->r();
@@ -188,14 +212,16 @@ public:
         return *this;
     }
 
-    RubiksCube &r2() {
+    RubiksCube &r2() 
+    {
         this->r();
         this->r();
 
         return *this;
     }
 
-    RubiksCube &b() {
+    RubiksCube &b() 
+    {
         this->rotateFace(4);
 
         char temp_arr[3] = {};
@@ -208,7 +234,8 @@ public:
         return *this;
     }
 
-    RubiksCube &bPrime() {
+    RubiksCube &bPrime() 
+    {
         this->b();
         this->b();
         this->b();
@@ -216,14 +243,16 @@ public:
         return *this;
     }
 
-    RubiksCube &b2() {
+    RubiksCube &b2() 
+    {
         this->b();
         this->b();
 
         return *this;
     }
 
-    RubiksCube &d() {
+    RubiksCube &d() 
+    {
         this->rotateFace(5);
 
         char temp_arr[3] = {};
@@ -236,7 +265,8 @@ public:
         return *this;
     }
 
-    RubiksCube &dPrime() {
+    RubiksCube &dPrime() 
+    {
         this->d();
         this->d();
         this->d();
@@ -244,17 +274,22 @@ public:
         return *this;
     }
 
-    RubiksCube &d2() {
+    RubiksCube &d2() 
+    {
         this->d();
         this->d();
 
         return *this;
     }
 
-    bool operator==(const RubiksCube3dArray &r1) const {
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
+    bool operator==(const RubiksCube3dArray &r1) const 
+    {
+        for (int i = 0; i < 6; i++) 
+        {
+            for (int j = 0; j < 3; j++) 
+            {
+                for (int k = 0; k < 3; k++) 
+                {
                     if (r1.cube[i][j][k] != cube[i][j][k]) return false;
                 }
             }
@@ -262,10 +297,14 @@ public:
         return true;
     }
 
-    RubiksCube3dArray &operator=(const RubiksCube3dArray &r1) {
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
+    RubiksCube3dArray &operator=(const RubiksCube3dArray &r1) 
+    {
+        for (int i = 0; i < 6; i++) 
+        {
+            for (int j = 0; j < 3; j++) 
+            {
+                for (int k = 0; k < 3; k++) 
+                {
                     cube[i][j][k] = r1.cube[i][j][k];
                 }
             }
@@ -274,12 +313,17 @@ public:
     }
 };
 
-struct Hash3d {
-    size_t operator()(const RubiksCube3dArray &r1) const {
+struct Hash3d 
+{
+    size_t operator()(const RubiksCube3dArray &r1) const 
+    {
         string str = "";
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
+        for (int i = 0; i < 6; i++) 
+        {
+            for (int j = 0; j < 3; j++) 
+            {
+                for (int k = 0; k < 3; k++) 
+                {
                     str += r1.cube[i][j][k];
                 }
             }
