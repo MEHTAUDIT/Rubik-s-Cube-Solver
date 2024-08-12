@@ -1,3 +1,7 @@
+#ifndef PATTERNDATABASE_H
+#define PATTERNDATABASE_H
+
+
 #include "../RubiksCube.h"
 #include "NibbleArray.h"
 #include "bits/stdc++.h"
@@ -43,3 +47,4 @@ public:
     virtual void reset();
 };
 
+#endif

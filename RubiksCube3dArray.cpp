@@ -24,7 +24,7 @@ private:
 
 public:
     char cube[6][3][3];
-
+    virtual ~RubiksCube3dArray() = default;
     // RubiksCube3dArray() 
     // {
     //     for (int i = 0; i < 6; i++) 
