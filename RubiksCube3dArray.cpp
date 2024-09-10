@@ -25,22 +25,6 @@ private:
 public:
     char cube[6][3][3];
     virtual ~RubiksCube3dArray() = default;
-    // RubiksCube3dArray() 
-    // {
-    //     for (int i = 0; i < 6; i++) 
-    //     {
-    //         for (int j = 0; j < 3; j++) 
-    //         {
-    //             for (int k = 0; k < 3; k++)
-    //             {
-    //                 cube[i][j][k] = getColorLetter(COLOR[i]);
-    //             }
-    //         }
-    //     }
-
-    //     RubiksCube::print();
-    //     cout<<"------------------------------------------------------------------------\n";
-    // }
 
     void init()
     {

@@ -2,6 +2,9 @@
 #include "RubiksCube.h"
 #include "DFS.h"
 
+#ifndef RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
+#define RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
+
 template<typename T, typename H>
 class IDDFSSolver 
 {
@@ -66,3 +69,5 @@ public:
 
 
 };
+
+#endif

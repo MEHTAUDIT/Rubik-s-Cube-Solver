@@ -1,8 +1,8 @@
-// #ifndef DFSSOLVER_H
-// #define DFSSOLVER_H
-
 #include <bits/stdc++.h>
 #include "RubiksCube.h"
+
+// #ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H
+// #define RUBIKS_CUBE_SOLVER_DFSSOLVER_H
 
 template<typename T, typename H>
 class DFSSolver {
