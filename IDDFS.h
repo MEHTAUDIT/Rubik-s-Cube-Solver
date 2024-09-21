@@ -46,6 +46,7 @@ public:
 
     vector<string> solve() 
     {
+        srand(time(0));
         for (int i = 1; i <= max_search_depth; i++) 
         {
             DFSSolver<T, H> dfsSolver(rubiksCube, i);

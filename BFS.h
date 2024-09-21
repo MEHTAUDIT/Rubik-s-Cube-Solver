@@ -32,6 +32,7 @@ private:
 
     T bfs() 
     {
+        srand(time(0));
         queue<T> q;
         q.push(rubiksCube);
         visited[rubiksCube] = true;

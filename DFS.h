@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 #include "RubiksCube.h"
 
-// #ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H
-// #define RUBIKS_CUBE_SOLVER_DFSSOLVER_H
+#ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H
+#define RUBIKS_CUBE_SOLVER_DFSSOLVER_H
 
 template<typename T, typename H>
 class DFSSolver {
@@ -38,7 +38,9 @@ public:
     DFSSolver(T _rubiksCube, int _max_search_depth = 8) 
         : rubiksCube(_rubiksCube), max_search_depth(_max_search_depth), temp(_rubiksCube) {}
 
-    std::vector<std::string> solve() {
+    std::vector<std::string> solve() 
+    {
+        srand(time(0));
         dfs(1);
         for (auto& vv : moves) {
             temp.move(vv);
@@ -48,4 +50,4 @@ public:
     }
 };
 
-// #endif
+#endif
