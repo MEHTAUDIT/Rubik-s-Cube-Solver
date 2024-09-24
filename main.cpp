@@ -20,18 +20,18 @@ int main()
 
     //-------------------3D DFS Solver---------------------
 
-    // RubiksCube3dArray cube;
-    // cube.init();
+    RubiksCube3dArray cube;
+    cube.init();
 
-    // vector<string> shuffle_moves = cube.randomShuffleCube(4);
-    // for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-    // cout << "\n";
+    vector<string> shuffle_moves = cube.randomShuffleCube(4);
+    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    cout << "\n";
 
-    // DFSSolver<RubiksCube3dArray, Hash3d> dfsSolver(cube, 8);
-    // vector<string> solve_moves = dfsSolver.solve();
+    DFSSolver<RubiksCube3dArray, Hash3d> dfsSolver(cube, 8);
+    vector<string> solve_moves = dfsSolver.solve();
 
-    // for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-    // cout << "\n";
+    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+    cout << "\n";
 
     //----------------3D BFS Solver--------------------
 
@@ -160,18 +160,19 @@ int main()
 
     //---------------------IDA* Solver-----------------------
 
-    RubiksCubeBitboard cube;
-    cube.init();
+    // RubiksCubeBitboard cube;
+    // cube.init();
 
-    vector<string> shuffle_moves = cube.randomShuffleCube(4);
-    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-    cout << "\n";
+    // vector<string> shuffle_moves = cube.randomShuffleCube(4);
+    // for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
 
-    IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube,"");
-    vector<string> solve_moves = idAstarSolver.solve();
+    // string s="/Users/uditmehta/Desktop/Rubik-s-Cube-Solver/t.txt";
+    // IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube,s);
+    // vector<string> solve_moves = idAstarSolver.solve();
 
-    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-    cout << "\n";
+    // for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
 
 
 }
